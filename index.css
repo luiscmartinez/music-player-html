@@ -1,0 +1,23 @@
+/* Container for the music thumbnail */
+.music-thumbnail-container {
+  position: relative;
+  width: 250px; /* You can adjust this */
+  height: 350px; /* Thumbnail is square, but you can adjust height independently if you prefer */
+  overflow: hidden; /* Ensures the image stays within bounds */
+  border-radius: 15px; /* Rounded corners for a softer look. Adjust as desired. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+  margin: 0 auto; /* Center the thumbnail if the parent container allows it */
+}
+
+/* The actual image */
+.music-thumbnail-container img {
+  display: block; /* Block-level element ensures it takes up full space */
+  width: 100%; /* Take up full width of the container */
+  height: 100%; /* Take up full height of the container */
+  object-fit: cover; /* Ensures image covers the entire container without distortion */
+  transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+.center-flexbox {
+  margin: 0 auto; /* Center the thumbnail if the parent container allows it */
+}
+
