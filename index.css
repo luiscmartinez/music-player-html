@@ -31,10 +31,21 @@ body {
   flex-direction: column;
   justify-content: center; /* Pack items around the center */
   align-items: center;
+  padding: 5px;
+  margin-top: 5px;
 }
 
 .song-title {
   text-align: center;
   margin-bottom: 10px;
   color: white;
+  text-decoration-line: underline;
+}
+
+audio {
+  width: 95%;
+}
+
+.music-card {
+  border: 2px solid black;
 }
