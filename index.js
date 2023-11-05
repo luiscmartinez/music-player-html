@@ -14,15 +14,17 @@ const filenames = [
 ];
 
 // JavaScript to create a new HTML page based on an array of strings
-const fs = require('fs');
+const fs = require("fs");
 
 function parseSongName(name) {
-    return name.split("_").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+  return name
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
 filenames.forEach((filename) => {
-
-    const htmlContent = `
+  const htmlContent = `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -39,7 +41,9 @@ filenames.forEach((filename) => {
                 <img src="/media/hero.png" class="hero">
                 </div>
                 <div class="center-flexbox">
-                  <figcaption class="song-title">Listen to: ${parseSongName(filename)}</figcaption>
+                  <figcaption class="song-title">Listen to: ${parseSongName(
+                    filename
+                  )}</figcaption>
                  <audio controls src="/media/usher-${filename}.mp3" autoplay>
                     <a href="/media/${filename}.mp3"> Download audio </a>
                 </audio>
@@ -50,8 +54,8 @@ filenames.forEach((filename) => {
     </html>
     `;
 
-    fs.writeFile(`${filename}.html`, htmlContent, (err) => {
-        if (err) throw err;
-        console.log(`File ${filename}.html has been created!`);
-    });
+  fs.writeFile(`${filename}.html`, htmlContent, (err) => {
+    if (err) throw err;
+    console.log(`File ${filename}.html has been created!`);
+  });
 });
