@@ -11,6 +11,8 @@ const filenames = [
   "lemme_see",
   "u_dont_have_to_call",
   "u_make_me_wanna",
+  "can_u_handle_it",
+  "u_got_it_bad"
 ];
 
 // JavaScript to create a new HTML page based on an array of strings
